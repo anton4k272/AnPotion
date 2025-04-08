@@ -1,0 +1,23 @@
+name: AnPotions
+version: '1.0'
+main: com.github.AnPotions
+api-version: '1.16'
+depend: [Vault]
+author: anton4k272
+description: Плагин для стака зелий в Minecraft.
+
+commands:
+  anbaff:
+    description: Открытие меню бафовара или перезагрузка конфигурации.
+    usage: /anbaff [admin reload]
+    aliases: [potion]
+    permission: anpotions.baff
+    permission-message: 'У вас нет прав на использование этой команды.'
+
+permissions:
+  anpotions.baff:
+    description: Позволяет игрокам открывать меню бафовара.
+    default: true
+  anpotions.admin:
+    description: Позволяет администраторам перезагружать конфигурацию плагина.
+    default: op
